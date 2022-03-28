@@ -11,11 +11,10 @@
 <body>
     <h1>Daftar Mahasiswa</h1>
     <ol>
-        <li><?php echo $mahasiswa01; ?> </li> 
-        <li><?php echo $mahasiswa02; ?> </li>
-        <li><?php echo $mahasiswa03; ?> </li>
-        <li><?php echo $mahasiswa04; ?> </li>
-        <li><?php echo $mahasiswa04; ?> </li>
+       <?php foreach ($mahasiswa as $nama) {
+        echo "<li> $nama </li>";
+       }
+       ?>
     </ol>
 </body>
 <div>
