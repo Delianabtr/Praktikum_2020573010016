@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatemasiswasTable extends Migration
+class CreateDosensTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,18 +13,19 @@ class CreatemasiswasTable extends Migration
      */
     public function up()
     {
-        Schema::create('mahasiswas', function (Blueprint $table) {
+        Schema::create('dosens', function (Blueprint $table) {
             $table->id();
-            $table->char('nim', 8);
+            $table->char('NIP', 13);
             $table->string('nama');
             $table->string('tempat_lahir');
             $table->date('tanggal_lahir');
-            $table->date('fakultas');
+            $table->string('fakultas');
             $table->string('jurusan');
-            $table->date('ipk', 3, 2);
+            $table->string('jabatan');
             $table->timestamps();
         });
     }
+
     /**
      * Reverse the migrations.
      *
@@ -32,6 +33,6 @@ class CreatemasiswasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mahasiswas');
+        Schema::dropIfExists('dosens');
     }
 }

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatemasiswasTable extends Migration
+class CreatePersonalAccessTokensTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,18 +13,17 @@ class CreatemasiswasTable extends Migration
      */
     public function up()
     {
-        Schema::create('mahasiswas', function (Blueprint $table) {
+        Schema::create('personal_access_tokens', function (Blueprint $table) {
             $table->id();
-            $table->char('nim', 8);
-            $table->string('nama');
-            $table->string('tempat_lahir');
-            $table->date('tanggal_lahir');
-            $table->date('fakultas');
-            $table->string('jurusan');
-            $table->date('ipk', 3, 2);
+            $table->morphs('tokenable');
+            $table->string('name');
+            $table->string('token', 64)->unique();
+            $table->text('abilities')->nullable();
+            $table->timestamp('last_used_at')->nullable();
             $table->timestamps();
         });
     }
+
     /**
      * Reverse the migrations.
      *
@@ -32,6 +31,6 @@ class CreatemasiswasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mahasiswas');
+        Schema::dropIfExists('personal_access_tokens');
     }
 }

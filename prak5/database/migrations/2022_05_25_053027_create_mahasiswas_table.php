@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatemasiswasTable extends Migration
+class CreateMahasiswasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -25,6 +25,7 @@ class CreatemasiswasTable extends Migration
             $table->timestamps();
         });
     }
+
     /**
      * Reverse the migrations.
      *
