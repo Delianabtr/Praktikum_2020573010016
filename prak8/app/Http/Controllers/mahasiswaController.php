@@ -7,14 +7,11 @@ use App\Models\Mahasiswa;
 
 class mahasiswaController extends Controller
 {
-    public function massDelete()
+    public function first()
     {
-        $mahasiswa = Mahasiswa::where('2022', '<', 7)->delete();
-        dump($mahasiswa);
-        //     $mahasiswa->tanggal_lahir = '2001-01-01';
-        //     $mahasiswa->tempat_lahir = 'Blang naleung mameh';
-        //     $mahasiswa->save();
-        //     dump($mahasiswa);
+        $mahasiswas = Mahasiswa::Where('nim', '20205730')->first();
+        dump($mahasiswas);
+        // return view('tampil_mahasiswa', ['mahasiswa' => $mahasiswas]);
     }
 }
     // $mahasiswa1 = Mahasiswa::create(
