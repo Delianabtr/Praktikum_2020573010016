@@ -30,7 +30,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
   <style type="text/css">
     .navbar-inverse {
-      background-color: #333;
+      background-color: #444;
     }
 
     .navbar-color {
@@ -51,7 +51,7 @@
 </head>
 
 <body class="hold-transition login-page" style="overflow-y: hidden;background:url(
-	'<?php echo base_url('assets_style/image/buku-1.jpg'); ?>')no-repeat;background-size:100%;">
+	'<?php echo base_url('assets_style/image/buku1.jpg'); ?>')no-repeat;background-size:100%;">
   <div class="login-box">
     <br />
     <div class="login-logo">
@@ -91,10 +91,8 @@
     <!-- /.login-box-body -->
     <br />
     <footer>
-      <div class="login-box-body text-center bg-blue">
-        <a style="color: White;"> Deliana <?php ("Y"); ?>
-      </div>
-    </footer>
+  </div>
+  </footer>
   </div>
   <!-- /.login-box -->
   <!-- Response Ajax -->
